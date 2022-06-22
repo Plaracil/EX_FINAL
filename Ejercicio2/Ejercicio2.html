@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title> 
+    <script src="Ejercicio2.js"></script>
+    
+
+    <HTML>
+        <HEAD>
+        <TITLE>Arrays</TITLE>
+        <SCRIPT LANGUAGE ="JavaScript">
+        
+        
+          function tratarTexto() {
+        
+            var array_palabras = new Array();
+            var nueva_ventana;
+            var num_palabras
+          
+            array_palabras=miFormulario.miArea.value.split(" "); 
+            num_palabras=array_palabras.length;
+
+            nueva_ventana=window.open("","","width=375,height=275,menubar=no"); 
+            nueva_ventana.document.write("<TITLE>Arrays</TITLE>");
+            nueva_ventana.document.write("<CENTER>");
+            nueva_ventana.document.write("<H3>Informaci�n sobre el texto introducido...:</H3>");
+            nueva_ventana.document.write("número de palabras : ");
+            nueva_ventana.document.write("<B>" + num_palabras + "</B>");
+            nueva_ventana.document.write("<BR>primera palabra : ");
+            nueva_ventana.document.write(array_palabras[0].bold());
+            nueva_ventana.document.write("<BR>última palabra : ");
+            nueva_ventana.document.write(array_palabras[num_palabras-1].bold());
+            nueva_ventana.document.write("<BR>ordenadas de la 'a' a la 'z':<BR>");
+            nueva_ventana.document.write(array_palabras.sort().join("..").bold());
+            nueva_ventana.document.write("</CENTER>");
+          }
+    </SCRIPT>
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<CENTER>
+<H1>Segundo Ejercicio</H1>
+<FORM NAME="miFormulario">
+<BR><B>Introduce un texto:</B><BR><BR>
+<TEXTAREA NAME="miArea" WRAP=VIRUAL ROWS=5 COLS=30></TEXTAREA>
+<BR><BR>
+<INPUT TYPE=BUTTON VALUE="Púlsame" NAME="miBoton" onClick="tratarTexto()">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>
