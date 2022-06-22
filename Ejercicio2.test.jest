@@ -1,0 +1,29 @@
+function tratarTexto() {
+        
+    var array_palabras = new Array();
+    var nueva_ventana;
+    var num_palabras
+  
+    array_palabras=miFormulario.miArea.value.split(" "); 
+    num_palabras=array_palabras.length;
+
+    describe('Nombramos el ancho y la altura');
+    nueva_ventana=window.open("","","width=375,height=275,menubar=no"); 
+    document.write("<TITLE>Arrays</TITLE>");
+    describe('Centramos nuestro documento');
+    document.write("<CENTER>");
+    describe('Hacemos que nos devuelva la información que hemso puesto');
+    document.write("<H3>Información sobre el texto introducido...:</H3>");
+    describe('Hacemos que nos diga cuantas palabras hay en total');
+    document.write("número de palabras : ");
+   document.write("<B>" + num_palabras + "</B>");
+   describe('Hacemos que nos diga la primera palabra de la frase que hemos compuesto')
+    document.write("<BR>primera palabra : ");
+    document.write(array_palabras[0].bold());
+    describe('Hacemso que nos diga la última palabra de la frase que hemos compuesto')
+    document.write("<BR>última palabra : ");
+   document.write(array_palabras[num_palabras-1].bold());
+   describe('Hacemso que nos ordene las palabras alfabeticamente')
+   document.write("<BR>ordenadas de la 'a' a la 'z':<BR>");
+    document.write(array_palabras.sort().join("..").bold());
+    document.write("</CENTER>");
