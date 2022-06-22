@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title> 
+    <script src="Ejercicio1.js"></script>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>Ejercicio 1</legend>
+                <form action="../../form-result.php" method="post" target="_blank">
+              <p>
+                Tipo de pizzas:<br>
+                <input type="radio" name="Tipo de pizzas" value="Cuatro Quesos">Cuatro Quesos<br>
+
+                <input type="radio" name="Tipo de pizzas" value="Carbonara">Carbonara<br>
+
+                <input type="radio" name="Tipo de pizzas" value="Barbacoa">Barbacoa<br>
+
+                <input type="radio" name="Tipo de pizzas" value="Tropical">Tropical<br>
+              </p>
+                </form>
+
+                
+                <form action="../../form-result.php" method="post" target="_blank">
+              <p>
+                Complementos de la pizza:<br>
+                <input type="radio" name="Complementos" value="Cuatro Quesos">extra queso<br>
+
+                <input type="radio" name="Complementos" value="Carbonara">bebida<br>
+
+                <input type="radio" name="Complementos" value="Barbacoa">postre<br>
+              </p>
+                </form>
+
+                <form action="../../form-result.php" method="post" target="_blank">
+                    <p>
+                      Bono:<br>
+                      <input type="radio" name="Bono" value="Si">Si<br>
+                      <input type="radio" name="Bono" value="No">No<br>
+                    </p>
+                </form>
+                
+        
+                <p id="resultado"></p>
+            </fieldset>   
+        </form>
+        <button onclick="Comanda()">Calcular</button>
+        <script src="ejercicio1.js"></script>
+    </body>
+</head>
+</html>
